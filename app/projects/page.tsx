@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { projects } from "../data/projects";
+import { project_entries } from "../project-entries";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {isHydrated
-          ? projects.map((project) => (
+          ? project_entries.map((project) => (
               <motion.div
                 key={project.slug}
                 initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
                   href={`/projects/${project.slug}`}
                   className="block p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-transform duration-300"
                 >
-                  <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
+                  <h2 className="text-xl mb-2">{project.title}</h2>
                   <p className="text-gray-600 mb-4">{project.overview}</p>
 
                   <div className="flex flex-wrap gap-2">

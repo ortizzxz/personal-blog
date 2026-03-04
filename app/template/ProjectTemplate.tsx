@@ -5,12 +5,12 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectTemplateProps {
-  title: string;
+  title?: string;
   subtitle?: string;
-  overview: string;
-  story: string;
-  techStack: string[];
-  documentation: React.ReactNode; // You can pass JSX for code snippets, diagrams, etc.
+  overview?: string;
+  story?: string;
+  techStack?: string[];
+  documentation?: React.ReactNode; // JSX
   projectLink?: string;
   repoLink?: string;
 }
@@ -20,11 +20,12 @@ export default function ProjectTemplate({
   subtitle,
   overview,
   story,
-  techStack,
+  techStack = [],
   documentation,
   projectLink,
   repoLink,
 }: ProjectTemplateProps) {
+
   return (
     <main className="w-full px-4 py-2 flex justify-center">
       <div className="max-w-4xl w-full">
@@ -43,11 +44,11 @@ export default function ProjectTemplate({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl  tracking-tight leading-tight text-center">
+          <h1 className="text-5xl tracking-tight leading-tight text-center">
             {title}
           </h1>
           {subtitle && (
-            <h2 className="mt-2 text-2xl font-semibold text-gray-700 text-center">
+            <h2 className="mt-2 text-2xl text-gray-700 text-center">
               {subtitle}
             </h2>
           )}
@@ -96,9 +97,7 @@ export default function ProjectTemplate({
           transition={{ duration: 0.6 }}
           className="mt-8"
         >
-          <h3 className="text-3xl mb-1 text-center">
-            Technical Documentation
-          </h3>
+          <h3 className="text-3xl mb-1 text-center">Technical Documentation</h3>
 
           {/* tech stack pills */}
           <div className="mb-6 flex justify-center flex-wrap gap-4">

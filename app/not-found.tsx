@@ -19,7 +19,7 @@ export default function NotFound() {
           </a>
 
           <a
-            href="/blogs"
+            href=""
             className="px-6 py-3 rounded-2xl border border-gray-300 text-sm font-medium hover:bg-gray-100 transition"
           >
             Read Blog
