@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "OrtizTech",
   description: "A Portfolio with some writing made by Jesus Ortiz",
+  verification: {
+    google: "vZLXFrB9nDHb9eFf8TPWLKy433Ec0L9V1jCwH7tEMk4",
+  },
 };
 
 export default function RootLayout({
