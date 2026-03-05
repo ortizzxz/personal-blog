@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Linkedin, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +36,26 @@ export default function Navbar() {
               </a>
             ))}
 
+            <a
+              href="https://www.linkedin.com/in/jesusdortizreyes/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black transition"
+            >
+              <Linkedin size={20} />
+            </a>
           </div>
 
           {/* Mobile Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+            <a
+                href="https://www.linkedin.com/in/jesusdortizreyes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black transition"
+              >
+                <Linkedin size={20} />
+              </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-2xl hover:bg-gray-100 transition"

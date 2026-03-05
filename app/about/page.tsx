@@ -15,15 +15,15 @@ export default function AboutMe() {
 
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             Engineer by curiosity.
-            <span className="block">Builder by passion.</span>
+            <span className="block">Developer by passion.</span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-            My journey into tech didn’t start with a job title — it started with
-            questions. I’ve always been drawn to understanding how systems
+            My journey into tech didn't start with pursuing a degree - actually it started with
+            questions. I've always been drawn to understanding how systems
             work, how ideas become products, and how code turns into something
             people actually use. That curiosity evolved into a passion for
-            building thoughtful, scalable digital experiences.
+            building thoughtful solutions, and, having fun while doing so.
           </p>
         </div>
 
@@ -37,14 +37,14 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -left-[46px] top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
+            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
               <Rocket size={18} />
             </div>
             <h3 className="text-xl font-semibold">The Beginning</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              I began by experimenting — small projects, simple websites, late
-              nights debugging. What started as exploration quickly became
-              discipline. I realized building software wasn’t just technical —
+              I began by experimenting - small Python projects, simple websites, learning what debugging was. 
+              What started as "oh this is fun" quickly became
+              a routine. I realized building software wasn't just technical and logical thinking -
               it was creative problem-solving.
             </p>
           </motion.div>
@@ -57,15 +57,16 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -left-[46px] top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
+            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
               <GraduationCap size={18} />
             </div>
             <h3 className="text-xl font-semibold">Studies & Learning</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              I strengthened my foundation through structured study and
-              self-driven courses — diving into computer science fundamentals,
+              I strengthened my early foundation through structured study and
+              self-driven courses (it's so typical for a programmer to be self-taught, right?). 
+              Then pursuing a degree which ended on me diving on computer science fundamentals,
               system design, algorithms, and modern web technologies. Learning
-              became a continuous habit, not a phase.
+              became a continuous habit, not a phase at this point.
             </p>
           </motion.div>
 
@@ -77,14 +78,14 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -left-[46px] top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
+            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
               <Briefcase size={18} />
             </div>
             <h3 className="text-xl font-semibold">Professional Experience</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Through real-world projects and professional work, I learned the
+              Through real-world projects (such as <a href="/projects/fodmap-searcher" className="text-blue-600">Tu FODMAP</a> being my first ever professional project) and corporate work, I learned the
               importance of collaboration, scalability, and writing maintainable
-              systems. Shipping features is important — but designing software
+              systems. Shipping features is important - but designing software
               that lasts is what truly matters.
             </p>
           </motion.div>
@@ -97,15 +98,16 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -left-[46px] top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
+            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
               <Code2 size={18} />
             </div>
             <h3 className="text-xl font-semibold">Projects with Purpose</h3>
             <p className="mt-3 text-gray-600 leading-relaxed">
-              Every project I build has intention. Some solve real problems I’ve
-              faced. Others push me into unfamiliar territory — new frameworks,
+              Every project I build has intention - as I like to think Software Development must provide real solutions. 
+              Some solve real problems I've
+              faced. Others push me into unfamiliar territory - new frameworks,
               architectural patterns, or performance challenges. Each one
-              represents growth.
+              represents growth, that's guaranteed.
             </p>
           </motion.div>
         </div>
@@ -119,8 +121,8 @@ export default function AboutMe() {
               <Globe className="mb-4" size={22} />
               <h4 className="font-semibold">Frontend</h4>
               <p className="mt-2 text-sm text-gray-600">
-                React, Next.js, TypeScript, Tailwind CSS — focused on clean
-                architecture and intuitive UI.
+                React, Angular, Next.js, TypeScript, Tailwind CSS - focused on clean
+                architecture and very intuitive UI.
               </p>
             </div>
 
@@ -128,7 +130,7 @@ export default function AboutMe() {
               <Database className="mb-4" size={22} />
               <h4 className="font-semibold">Backend</h4>
               <p className="mt-2 text-sm text-gray-600">
-                Node.js, APIs, databases, authentication systems, and scalable
+                Java + Spring Boot, Node.js + Sequelize, APIs, databases, authentication systems, and scalable
                 server-side logic.
               </p>
             </div>

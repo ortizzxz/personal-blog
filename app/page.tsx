@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { project_entries } from "./project-entries";
 import { Linkedin, Github } from "lucide-react";
+import { blog_entries } from "./blog-entries";
 
 export default function Home() {
   const featuredProjects = project_entries.slice(-3).reverse(); // latest 3
+  const featuredBlogs = [...blog_entries]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   return (
     <>
@@ -18,7 +22,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="flex-1 max-w-3xl"
         >
-          <p className="text-sm uppercase tracking-widest text-gray-400">Hey there!, I'm</p>
+          <p className="text-sm uppercase tracking-widest text-gray-400">Hey there! I'm</p>
           <h1 className="mt-2 text-5xl md:text-6xl tracking-tight leading-tight">
             Jesús Ortiz
           </h1>
@@ -26,28 +30,28 @@ export default function Home() {
             I like building clean and scalable full stack solutions.
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-            Focused on performance, developer experience, and modern web architecture.
-            I enjoy turning complex problems into elegant solutions and continuously exploring new technologies.
+            I focus on clean, well written code. Easy to maintain and scalable solutions and of course, having fun while doing so.
+            I'm currently a Full Stack developer always discovering new technologies to experience with.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="#projects"
-              className="px-6 py-3 rounded-2xl bg-black text-white text-sm font-medium hover:opacity-90 transition"
+              href="/projects"
+              className="px-6 py-3 rounded-2xl bg-black text-white text-sm font-medium hover:opacity-80 transition"
             >
               View Projects
             </Link>
-            <Link
-              href="#about"
-              className="px-6 py-3 rounded-2xl border border-gray-300 text-sm font-medium hover:bg-gray-100 transition"
+            <span
+              onClick={() => (window.location.href = '/about')}
+              className="px-6 py-3 rounded-2xl border border-gray-300 text-sm font-medium hover:bg-gray-100 transition cursor-pointer"
             >
               About Me
-            </Link>
+            </span>
           </div>
 
           <div className="mt-4 flex flex-wrap gap-4">
             <a
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/jesusdortizreyes/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 text-sm hover:text-blue-600 transition"
@@ -56,7 +60,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/your-profile"
+              href="https://github.com/ortizzxz"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-600 text-sm hover:text-gray-900 transition"
@@ -77,44 +81,19 @@ export default function Home() {
         >
           <h3 className="text-2xl font-medium ">Latest Blog Entries</h3>
           <div className="flex flex-col gap-4">
-            <Link
-              href="#blog"
-              className="p-6 border border-gray-200 rounded-2xl cursor-pointer 
-               bg-gray-50
-               transform transition-transform duration-300 ease-in-out
-                hover:shadow-md hover:border-gray-300"
-            >
-              <h4 className="text-lg">Understanding React Suspense</h4>
-              <p className="  text-gray-600 text-sm">
-                A deep dive into how Suspense improves UX and performance in React apps.
-              </p>
-            </Link>
-
-            <Link
-              href="#blog"
-              className="p-6 border border-gray-200 rounded-2xl cursor-pointer 
-               bg-gray-50
-               transform transition-transform duration-300 ease-in-out
-                hover:shadow-md hover:border-gray-300"
-            >
-              <h4 className="text-lg">Scaling Node.js APIs</h4>
-              <p className="  text-gray-600 text-sm">
-                Techniques and patterns for building scalable and maintainable Node.js backends.
-              </p>
-            </Link>
-
-            <Link
-              href="#blog"
-              className="p-6 border border-gray-200 rounded-2xl cursor-pointer 
-               bg-gray-50
-               transform transition-transform duration-300 ease-in-out
-                hover:shadow-md hover:border-gray-300"
-            >
-              <h4 className="text-lg">Modern CSS Grid Layouts</h4>
-              <p className=" text-gray-600 text-sm">
-                Practical tips for building responsive layouts with CSS Grid in 2026.
-              </p>
-            </Link>
+            {featuredBlogs.map((blog) => (
+              <div
+                key={blog.slug}
+                onClick={() => (window.location.href = `/blog/${blog.slug}`)}
+                className="p-6 border border-gray-200 rounded-2xl cursor-pointer 
+                 w-full md:w-80 lg:w-84 bg-gray-50
+                 hover:shadow-md hover:border-gray-300
+                 transform transition-transform duration-300 ease-in-out"
+              >
+                <h4 className="text-lg">{blog.title}</h4>
+                <p className="mt-2 text-gray-600 text-sm">{blog.subtitle}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </main>
