@@ -58,13 +58,17 @@ const project2 = {
 
     <h2>Links</h2>
     <p>
+      <a href="https://agro-rose.vercel.app/" className="text-blue-600 underline ml-2" target="_blank" rel="noopener noreferrer">
+        Live Site
+      </a>
+       {" "}|
       <a href="https://github.com/ortizzxz/agro" className="text-blue-600 underline ml-2" target="_blank" rel="noopener noreferrer">
         Source Code
       </a>
     </p>
   </div>
 ),
-  projectLink: "https://github.com/ortizzxz/agro",
+  projectLink: "https://agro-rose.vercel.app/",
   repoLink: "https://github.com/ortizzxz/agro",
 };
 
