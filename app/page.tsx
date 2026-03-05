@@ -30,8 +30,8 @@ export default function Home() {
             I like building clean and scalable full stack solutions.
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-            I focus on clean, well written code. Easy to maintain and scalable solutions and of course, having fun while doing so.
-            I'm currently a Full Stack developer always discovering new technologies to experience with.
+            I focus on writing clean, well-structured code that is easy to maintain and scalable.
+            I also believe development should be fun. Currently, I work as a Full Stack Developer and enjoy discovering and experimenting with new technologies.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
