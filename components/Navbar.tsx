@@ -21,7 +21,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-semibold tracking-tight hover:opacity-80 transition"
           >
-            Ortiz Blog
+            OrtizTech
           </a>
 
           {/* Desktop Nav */}
