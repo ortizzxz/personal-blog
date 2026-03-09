@@ -20,7 +20,6 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {isHydrated
                     ? blog_entries.map((blog) => (
-                        blog_entries.map((blog) => (
                             <motion.div
                                 key={blog.slug}
                                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +47,6 @@ export default function ProjectsPage() {
                                 </Link>
                             </motion.div>
                         ))
-                    ))
                     : skeletons.map((_, index) => (
                         <div
                             key={index}

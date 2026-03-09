@@ -8,7 +8,7 @@ const xzUtilsBackdoor = {
   date: "March 5, 2026",
   readTime: "10 min read",
   content: (
-    <div className="prose prose-lg prose-gray max-w-none mx-auto space-y-6 mb-2">
+    <div className="prose prose-lg prose-gray max-w-none mx-auto space-y-6 mb-10 text-justify">
       <p>
         Let me tell you about something that almost turned into one of the
         biggest cybersecurity disasters in recent history. And the craziest
@@ -22,7 +22,7 @@ const xzUtilsBackdoor = {
         software in the Linux world.
       </p>
 
-      <h2>First — What is XZ Utils?</h2>
+      <h2 className="font-bold">First — What is XZ Utils?</h2>
 
       <p>
         XZ Utils is basically a compression tool. Think of it like zip files,
@@ -40,7 +40,7 @@ const xzUtilsBackdoor = {
         But in early 2024, someone managed to sneak a backdoor into it.
       </p>
 
-      <h2>How the Attack Happened</h2>
+      <h2 className="font-bold">How the Attack Happened</h2>
 
       <p>
         This wasn’t some random hacker dropping malicious code in a single
@@ -58,7 +58,7 @@ const xzUtilsBackdoor = {
         it was malicious code.
       </p>
 
-      <h2>What the Backdoor Actually Did</h2>
+      <h2 className="font-bold">What the Backdoor Actually Did</h2>
 
       <p>
         The backdoor targeted SSH — the system that lets administrators log
@@ -110,7 +110,7 @@ const xzUtilsBackdoor = {
         That discovery ended up exposing the entire backdoor.
       </p>
 
-      <h2>How Close We Actually Were</h2>
+      <h2 className="font-bold">How Close We Actually Were</h2>
 
       <p>
         The infected versions had already made their way into development
@@ -126,7 +126,7 @@ const xzUtilsBackdoor = {
         Instead, the vulnerability was caught just in time.
       </p>
 
-      <h2>Why This Matters</h2>
+      <h2 className="font-bold">Why This Matters</h2>
 
       <p>
         This incident showed something important: modern software depends on
@@ -145,7 +145,7 @@ const xzUtilsBackdoor = {
         way into trusted systems over time.
       </p>
 
-      <h2>Final Thoughts</h2>
+      <h2 className="font-bold">Final Thoughts</h2>
 
       <p>
         The XZ Utils backdoor is a perfect example of how fragile the modern
