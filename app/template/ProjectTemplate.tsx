@@ -39,11 +39,7 @@ export default function ProjectTemplate({
         </Link>
 
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <h1 className="text-5xl tracking-tight leading-tight text-center">
             {title}
           </h1>
@@ -77,30 +73,20 @@ export default function ProjectTemplate({
               </a>
             )}
           </div>
-        </motion.div>
+        </div>
 
         {/* Story Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-8"
-        >
-          <h3 className="text-3xl mb-1 text-center">The Story</h3>
-          <p className="text-gray-600 leading-relaxed text-center">{story}</p>
-        </motion.section>
+        <div className="mt-8">
+          <h3 className="text-3xl mb-1">The Story</h3>
+          <p className="text-gray-600 leading-relaxed ">{story}</p>
+        </div>
 
         {/* Technical Details */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-8"
-        >
-          <h3 className="text-3xl mb-1 text-center">Technical Documentation</h3>
+        <div className="mt-8">
+          <h3 className="text-3xl mb-1">Technical Documentation</h3>
 
           {/* tech stack pills */}
-          <div className="mb-6 flex justify-center flex-wrap gap-4">
+          <div className="mb-6 flex justify-start flex-wrap gap-4">
             {techStack.map((tech, index) => (
               <span
                 key={index}
@@ -113,7 +99,7 @@ export default function ProjectTemplate({
 
           {/* Documentation Content */}
           <div className="prose max-w-none mx-auto">{documentation}</div>
-        </motion.section>
+        </div>
       </div>
     </main>
   );
