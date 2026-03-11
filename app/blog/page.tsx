@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                     ? blog_entries.map((blog) => (
                             <motion.div
                                 key={blog.slug}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4 }}
                             >

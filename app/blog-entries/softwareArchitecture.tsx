@@ -5,7 +5,7 @@ const template = {
   title: "Software Architecture: The What and Why",
   subtitle: "You might have heard about Software Architecture recently without really knowing what it means-so let me simplify it for you.",
   author: "Jesús Ortiz",
-  date: ", 2026",
+  date: "March 10, 2026",
   readTime: "6 min read",
   content: (
     <div className="prose prose-lg prose-gray max-w-none mx-auto space-y-6 mb-10 text-justify">

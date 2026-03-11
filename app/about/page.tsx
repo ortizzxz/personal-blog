@@ -1,14 +1,11 @@
-"use client"
-
-import { motion } from "framer-motion";
-import { Code2, Rocket, Briefcase, GraduationCap, Cpu, Database, Globe } from "lucide-react";
+import { Cpu, Database, Monitor } from "lucide-react";
 
 export default function AboutMe() {
   return (
-    <section id="about" className="w-full bg-white py-2 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="w-full bg-white py-2 px-8">
+      <div className="mx-auto">
         {/* Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mb-4">
           <p className="text-sm uppercase tracking-widest text-gray-400">
             About Me
           </p>
@@ -27,99 +24,15 @@ export default function AboutMe() {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="mt-20 relative border-l border-gray-200 pl-7 space-y-16">
-          {/* Step 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
-              <Rocket size={18} />
-            </div>
-            <h3 className="text-xl font-semibold">The Beginning</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              I began by experimenting - small Python projects, simple websites, learning what debugging was. 
-              What started as "oh this is fun" quickly became
-              a routine. I realized building software wasn't just technical and logical thinking -
-              it was creative problem-solving.
-            </p>
-          </motion.div>
-
-          {/* Step 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
-              <GraduationCap size={18} />
-            </div>
-            <h3 className="text-xl font-semibold">Studies & Learning</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              I strengthened my early foundation through structured study and
-              self-driven courses (it's so typical for a programmer to be self-taught, right?). 
-              Then pursuing a degree which ended on me diving on computer science fundamentals,
-              system design, algorithms, and modern web technologies. Learning
-              became a continuous habit, not a phase at this point.
-            </p>
-          </motion.div>
-
-          {/* Step 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
-              <Briefcase size={18} />
-            </div>
-            <h3 className="text-xl font-semibold">Professional Experience</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              Through real-world projects (such as <a href="/projects/fodmap-searcher" className="text-blue-600">Tu FODMAP</a> being my first ever professional project) and corporate work, I learned the
-              importance of collaboration, scalability, and writing maintainable
-              systems. Shipping features is important - but designing software
-              that lasts is what truly matters.
-            </p>
-          </motion.div>
-
-          {/* Step 4 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="absolute -left-11.5 top-1 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center shadow-md">
-              <Code2 size={18} />
-            </div>
-            <h3 className="text-xl font-semibold">Projects with Purpose</h3>
-            <p className="mt-3 text-gray-600 leading-relaxed">
-              Every project I build has intention - as I like to think Software Development must provide real solutions. 
-              Some solve real problems I've
-              faced. Others push me into unfamiliar territory - new frameworks,
-              architectural patterns, or performance challenges. Each one
-              represents growth, that's guaranteed.
-            </p>
-          </motion.div>
-        </div>
-
         {/* Tech Stack */}
-        <div className="mt-28">
-          <h3 className="text-2xl font-semibold tracking-tight">Tech Stack</h3>
-
-          <div className="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div>
+          <h3 className="text-2xl mb-4 font-semibold tracking-tight">Tech Stack</h3>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl border border-gray-200 hover:shadow-md transition">
-              <Globe className="mb-4" size={22} />
-              <h4 className="font-semibold">Frontend</h4>
+              <div className="flex gap-2 items-center">
+                <Monitor size={22} />
+                <h4 className="font-semibold">Frontend</h4>
+              </div>
               <p className="mt-2 text-sm text-gray-600">
                 React, Angular, Next.js, TypeScript, Tailwind CSS - focused on clean
                 architecture and very intuitive UI.
@@ -127,8 +40,10 @@ export default function AboutMe() {
             </div>
 
             <div className="p-6 rounded-2xl border border-gray-200 hover:shadow-md transition">
-              <Database className="mb-4" size={22} />
+              <div className="flex gap-2 items-center">
+              <Database size={22} />
               <h4 className="font-semibold">Backend</h4>
+              </div>
               <p className="mt-2 text-sm text-gray-600">
                 Java + Spring Boot, Node.js + Sequelize, APIs, databases, authentication systems, and scalable
                 server-side logic.
@@ -136,8 +51,10 @@ export default function AboutMe() {
             </div>
 
             <div className="p-6 rounded-2xl border border-gray-200 hover:shadow-md transition">
-              <Cpu className="mb-4" size={22} />
-              <h4 className="font-semibold">Engineering Mindset</h4>
+              <div className="flex gap-2 items-center">
+                <Cpu size={22} />
+                <h4 className="font-semibold">Engineering Mindset</h4>
+              </div>
               <p className="mt-2 text-sm text-gray-600">
                 System design, performance optimization, clean code
                 principles, and long-term maintainability.

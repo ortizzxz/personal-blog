@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 
@@ -33,42 +32,31 @@ export default function BlogTemplate({
           <ArrowLeft size={18} />
           Back to Blog
         </Link>
-        
+
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           {/* meta */}
           <div className="text-sm text-gray-500 flex gap-3 flex-wrap justify-center mb-4">
-            {date && <span className="flex gap-1 items-center"><Calendar/>{date}</span>}
-            {author && <span className="flex gap-1 items-center"><User/>{author}</span>}
+            {date && <span className="flex gap-1 items-center"><Calendar />{date}</span>}
+            {author && <span className="flex gap-1 items-center"><User />{author}</span>}
             {readTime && <span className="flex gap-1 items-center"><Clock />{readTime}</span>}
           </div>
 
           {/* title */}
-          <h1 className="text-5xl tracking-tight leading-tight text-center">
+          <h1 className="text-5xl tracking-tight leading-tight">
             {title}
           </h1>
 
           {/* subtitle */}
           {subtitle && (
-            <h2 className="mt-4 text-xl text-gray-600 text-center">
+            <h2 className="mt-4 text-xl text-gray-600">
               {subtitle}
             </h2>
           )}
-        </motion.div>
 
+        </div>
         {/* Blog Content */}
-        <motion.article
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-10"
-        >
-          <div className="prose max-w-none mx-auto">{content}</div>
-        </motion.article>
+        <div className="prose max-w-none mx-auto mt-10">{content}</div>
       </div>
     </main>
   );

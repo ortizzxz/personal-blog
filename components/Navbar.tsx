@@ -8,14 +8,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Projects", href: "/projects" },
     { name: "Blog", href: "/blog" },
     { name: "Profile", href: "/about" },
   ];
 
   return (
     <nav className="w-full sticky top-0 left-0 z-50 bg-white/70 backdrop-blur-xl border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="mx-auto px-8">
         <div className="flex items-center justify-between h-16">
           <a
             href="/"
